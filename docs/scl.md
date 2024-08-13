@@ -68,5 +68,5 @@ The SCL sytanx was defined with [ISO-14977-EBNF](https://www.cl.cam.ac.uk/~mgk25
 Here's the Railroad Diagram of the SCL syntax:
 
 <center>
-<img src="../pub/img/SCL_Grammar.png" alt="SCL Syntax" width=800/>
+<img src="../pub/img/SCL_Grammar.png" style="background-color: white;" alt="SCL Syntax" width=800/>
 </center>
