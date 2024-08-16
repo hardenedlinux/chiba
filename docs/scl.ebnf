@@ -1,10 +1,9 @@
 trunk = ( command_expr | status_expr | operation_expr );
 
-command_expr = node_command | global_command;
+command_expr = server_command | global_command;
 status_expr = "show", (node_name | node_list), element_ref;
 operation_expr = ("dump", ("json" | "xml")) | "refresh", ("all" | ("group", group_name) | node_name | node_list);
 
-node_command = server_command;
 global_command = "global_config" | "global_monitor" | "global_action" | "global_create" ;
 node_name = literal_string;
 group_name = literal_string;
@@ -22,6 +21,9 @@ monitor_cmd = "monitor", node_name, ( trigger_expr | "..." );
 
 global_monitor = "monitor", node_list, trigger_expr;
 global_create = "create", node_list, config_expr;
+global_action = "action", node_list, action_expr;
+global_create = "create", node_list, config_expr;
+
 config_expr = "storage", config | "network", config | "os_image", config;
 
 command_expr = command, arguments;
