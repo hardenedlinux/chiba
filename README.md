@@ -12,6 +12,18 @@ You might hear about fourth-generation data centers, or as they're more commonly
 <img src="https://hardenedvault.net/images/blog/data-center-evo_hu088243e27fca90948e44192083ac0422_130352_1713x940_fit_q100_h2_box_3.webp" alt="data center evolution"/>
 </center>
 
+### How it works?
+
+<center>
+<img src="pub/img/chiba-works.png" alt="How Chiba works"/>
+</center>
+
+The containerized data center is a modular data center that is tailorable, portable and can be transported to any location. It's a self-contained unit that includes all the necessary components for a data center, such as servers, storage, networking equipment, and cooling systems. The containerized data center is typically housed in a shipping container, which makes it easy to transport and deploy.
+
+Chiba project is a framework that leverages OpenBMC to provide infrastructure automation. It maintains backward compatibility with traditional cloud computing requirements like Kubernetes and virtualization. The Chiba project is designed to be a flexible and extensible framework that can be easily customized to meet the specific needs of different organizations.
+
+Typically, Chiba runs on a management server that communicates with the OpenBMC firmware on the servers in the containerized data center. Chiba will interpreter the SCL (Server Configuration Language) scripts to manage the servers in the containerized data center. The SCL scripts can be used to define the configuration of the servers, monitor the servers, and take action based on the monitoring results. The SCL scripts will be executed by the Chiba server and finally transformed to Redfish API sent to the OpenBMC firmware of all servers in the containerized data center.
+
 ### Why name Chiba
 
 Chiba is a Japan city with port, containers, and dockers. In [Neuromancer], it's also named **night city**. the underworld of the hackers that monitors and controls the upper world. So if you like the **night city** in 2077, now you know where it is.
