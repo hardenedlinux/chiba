@@ -20,6 +20,9 @@
   #:use-module (chiba bmc)
   #:use-module (json)
   #:export (redfish:systems
+            redfish:systems-config!
+            redfish:systems-update!
+            redfish:systems-remove!
             redfish:chassis
             redfish:managers
             redfish:sessions
@@ -45,8 +48,19 @@
 (define (redfish:systems api-call)
   (gen-redfish-api 'get "Systems" api-call))
 
-(define (redfish:chassis api-call)
-  (gen-redfish-api 'get "Chassis" api-call))
+(define (redfish:systems-config! api-call id data)
+  (gen-redfish-api 'post (format #f "Systems/~a" id) api-call data))
+
+(define (redfish:systems-udpate! api-call id data)
+  (gen-redfish-api 'patch (format #f "Systems/~a" id) api-call data))
+
+(define (redfish:systems-remove! api-call id)
+  (gen-redfish-api 'delete (format #f "Systems/~a" id) api-call))
+
+(define* (redfish:chassis api-call id resource #:key (query ""))
+  (gen-redfish-api 'get
+                   (format #f "Chassis/~a/~a~a" id resource query)
+                   api-call))
 
 (define (redfish:managers api-call)
   (gen-redfish-api 'get "Managers" api-call))
