@@ -34,6 +34,11 @@ The core concept of Chiba project is to take advantage of [OpenBMC](https://en.w
 
 Chiba project was created for fun and for profit.
 
+Nowadays, we're actually facing an extreamly complex supplychain. There are several neo cutting-edge models to cope with the complexity:
+- **Mainframe-Like all in one solution**: It is using the mainframe methodology to build new supplychain for x86 servers. E.g, [Oxide](https://oxide.computer/).
+- **GPU-oriented computing node**: To maximize the performance of a single node while playing the role of an ODM, ensuring the best cost-performance ratio. E.g, [Tinycorp - Tinybox](https://tinygrad.org/#tinybox).
+- **Building block approach**: Abstract the critical components in the OEM supply chain into building blocks that can be freely combined based on the needs of industry users. E.g, [HardenedVault](https://hardenedvault.net/).
+
 ### There're projects for controling OpenBMC, why bother to create another one?
 
 Yes, there're projects for OpenBMC and Redfish API.
