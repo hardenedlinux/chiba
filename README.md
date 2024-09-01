@@ -26,7 +26,7 @@ Typically, Chiba runs on a management server that communicates with the OpenBMC 
 
 ### Why name Chiba
 
-Chiba is a Japan city with port, containers, and dockers. In [Neuromancer], it's also named **night city**. the underworld of the hackers that monitors and controls the upper world. So if you like the **night city** in 2077, now you know where it is.
+Chiba is a Japan city with port, containers, and dockers. In [Neuromancer](https://en.wikipedia.org/wiki/Neuromancer), it's also named **night city**. the underworld of the hackers that monitors and controls the upper world. So if you like the **night city** in 2077, now you know where it is.
 
 The core concept of Chiba project is to take advantage of [OpenBMC](https://en.wikipedia.org/wiki/OpenBMC), the firmware that monitors and controls the upper world upon the motherboard, or you may say, the virtual reality dataspace that was named **the matrix** in Neuromancer.
 
@@ -39,6 +39,14 @@ Chiba project was created for fun and for profit.
 Yes, there're projects for OpenBMC and Redfish API.
 
 However, Chiba project is not for single node OpenBMC, it's for many or even massive OpenBMC nodes. It's for the next generation of cloud computing infrastructure.
+
+### Who's behind Chiba?
+
+Chiba project has been developing by [HardenedLinux](https://hardenedlinux.org), which was entitled by [OpenSource Firmware Conference](https://osfc.io). OSFC is the organization devoted to building a community around Open Ecosystem of supplychain. The Chiba project is a part of the OSFC project.
+
+<center>
+<img src="https://www.osfc.io/assets/images/projects/hardened-linux.svg" alt="HardenedLinux" width=600 />
+</center>
 
 ### Who should use Chiba?
 
