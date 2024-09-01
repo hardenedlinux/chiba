@@ -45,7 +45,7 @@ However, Chiba project is not for single node OpenBMC, it's for many or even mas
 Chiba project has been developing by [HardenedLinux](https://hardenedlinux.org), which was entitled by [OpenSource Firmware Conference](https://osfc.io). OSFC is the organization devoted to building a community around Open Ecosystem of supplychain. The Chiba project is a part of the OSFC project.
 
 <center>
-<img src="https://www.osfc.io/assets/images/projects/hardened-linux.svg" alt="HardenedLinux" width=600 />
+<img src="https://www.osfc.io/assets/images/projects/hardened-linux.svg" alt="HardenedLinux" width=400 />
 </center>
 
 ### Who should use Chiba?
