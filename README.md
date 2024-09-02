@@ -2,7 +2,7 @@
 
 ## Intro
 
-You might hear about fourth-generation data centers, or as they're more commonly known, [containerized data centers](https://www.techtarget.com/searchdatacenter/tip/An-overview-of-containerized-data-centers-and-their-benefits). The container mentioned here doesn't refer to a Docker container, but rather the actual shipping container you'd see at a port, typically carried on a truck trailer.
+You might hear about next-gen data centers, or as they're more commonly known, [containerized data centers](https://www.techtarget.com/searchdatacenter/tip/An-overview-of-containerized-data-centers-and-their-benefits). The container mentioned here doesn't refer to a Docker container, but rather the actual shipping container you'd see at a port, typically carried on a truck trailer.
 
 <center>
 <img src="https://www.deltapowersolutions.com/media/images/products/datacenter-solutions-Containerized-datacenter-truck-inside.gif" alt="containerized data center"/>
@@ -34,8 +34,8 @@ The core concept of Chiba project is to take advantage of [OpenBMC](https://en.w
 
 Chiba project was created for fun and for profit.
 
-Nowadays, we're actually facing an extreamly complex supplychain. There are several neo cutting-edge models to cope with the complexity:
-- **Mainframe-Like all in one solution**: It is using the mainframe methodology to build new supplychain for x86 servers. E.g, [Oxide](https://oxide.computer/).
+Nowadays, we're actually facing an extreamly complex supply chain. There are several neo cutting-edge models to cope with the complexity:
+- **Mainframe-Like all in one solution**: It is using the mainframe methodology to build new supply chain for x86 servers. E.g, [Oxide](https://oxide.computer/).
 - **GPU-oriented computing node**: To maximize the performance of a single node while playing the role of an ODM, ensuring the best cost-performance ratio. E.g, [Tinycorp - Tinybox](https://tinygrad.org/#tinybox).
 - **Building block approach**: Abstract the critical components in the OEM supply chain into building blocks that can be freely combined based on the needs of industry users. E.g, [HardenedVault](https://hardenedvault.net/).
 
@@ -47,7 +47,7 @@ However, Chiba project is not for single node OpenBMC, it's for many or even mas
 
 ### Who's behind Chiba?
 
-Chiba project has been developing by [HardenedLinux](https://hardenedlinux.org), which was entitled by [OpenSource Firmware Conference](https://osfc.io). OSFC is the organization devoted to building a community around Open Ecosystem of supplychain.
+Chiba project has been developing by [HardenedLinux](https://hardenedlinux.org), which was entitled by [Open Source Firmware Conference](https://osfc.io). OSFC is the organization devoted to building a community around Open Ecosystem of supplychain.
 
 <center>
 <img src="https://www.osfc.io/assets/images/projects/hardened-linux.svg" alt="HardenedLinux" width=400 />
@@ -68,7 +68,7 @@ For technical geeks, Chiba is a good place to learn the OpenBMC and security enh
 
 ## What's special?
 
-### Infrastructure automation - the key point of the fourth-generation data centers
+### Infrastructure automation - the key point of the next-gen data centers
 
 The traditional cloud computing is based on the virtualization, which is a software layer that abstracts the hardware resources. In the coming AI era, the hardware resources may include dedicated hardware accelerators, such as GPU, TPU, FPGA, etc. The virtualization is not enough to manage these resources. The auto scaling, auto healing, auto upgrading, etc, are the key features of the next generation of cloud computing. All these features are based on the core firmware of the hardware, which is the OpenBMC.
 
