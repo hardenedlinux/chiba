@@ -1,5 +1,7 @@
 # Chiba project - the framework for next generation of cloud computing
 
+[日本語](docs/README_jp.md)
+
 ## Intro
 
 You might hear about next-gen data centers, or as they're more commonly known, [containerized data centers](https://www.techtarget.com/searchdatacenter/tip/An-overview-of-containerized-data-centers-and-their-benefits). The container mentioned here doesn't refer to a Docker container, but rather the actual shipping container you'd see at a port, typically carried on a truck trailer.

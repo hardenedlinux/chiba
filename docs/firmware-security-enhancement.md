@@ -1,5 +1,7 @@
 # Firmware security enhancement
 
+[日本語](docs/firmware-security-enhancement_jp.md)
+
 ## Why security is important for Chiba?
 
 Because Chiba server is a central management server, which is sensitive to unauthorized access. The security enhancement is a critical feature for Chiba server.
