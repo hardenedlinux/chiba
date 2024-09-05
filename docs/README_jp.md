@@ -108,7 +108,7 @@ Chibaは、Lispの方言であるGuile Schemeで開発されています。Schem
 
 ## インストール
 
-[こちら](docs/install_jp.md)
+[こちら](install_jp.md)
 
 **再び、もし東京にいるなら、ぜひコーヒーでも飲みましょう。**
 
