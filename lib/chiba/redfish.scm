@@ -19,7 +19,10 @@
   #:use-module (chiba utils)
   #:use-module (chiba bmc)
   #:use-module (json)
-  #:export (redfish:systems
+  #:export (redfish:boot-config
+            redfish:set-boot-first
+            redfish:force-reboot
+            redfish:systems
             redfish:systems-config!
             redfish:systems-update!
             redfish:systems-remove!
@@ -44,6 +47,22 @@
   (json-string->scm (apply (api-call method
                                      (pk 'api (redfish/v1 api)))
                            args)))
+
+(define (redfish:boot-config api-call id data)
+  (gen-redfish-api 'patch (format #f "Systems/~a" id) api-call data))
+
+(define* (redfish:set-boot-first api-call id item #:key (override "Once"))
+  (redfish:boot-config
+   api-call id
+   (scm->json-string
+    `(("Boot" . (("BootSourceOverrideTarget" . ,item)
+                 ("BootSourceOverrideEnabled" . ,override)))))))
+
+(define (redfish:force-reboot api-call id)
+  (gen-redfish-api
+   'post (format #f "Systems/~a/Actions/ComputerSystem.Reset" id)
+   api-call
+   (scm->json-string '(("ResetType" . "ForceRestart")))))
 
 (define (redfish:systems api-call)
   (gen-redfish-api 'get "Systems" api-call))
