@@ -16,17 +16,12 @@
 ;;  If not, see <http://www.gnu.org/licenses/>.
 
 (define-module (chiba rule-engine config)
+  #:use-module (chiba rule-engine utils)
   #:use-module (chiba app model node)
   #:use-module (chiba redfish)
   #:use-module (ice-9 match)
   #:use-module (artanis third-party json)
   #:export (chiba:node-config))
-
-(define (general-config redfish-call node-ip config-expr cmd)
-  (let* ((config (scm->json-string config-expr))
-         (token (try-to-get-token-from-ip node-ip))
-         (api-call (make-redfish-call node-ip token)))
-    (redfish-call api-call cmd config)))
 
 (define (system-config node-ip node-ip config-expr cmd)
   (general-config redfish:systems-config! node-ip system-config-expr cmd))
@@ -98,7 +93,8 @@
      (storage-action/volumes node-ip system-id storage-id volume-id act storage-config-expr rc))
     (('network system-id eth network-config-expr ...)
      (network-config node-ip system-id eth network-config-expr rc))
-
+    (('boot-order system-id mode)
+     (rule-general-call redfish:set-boot-first node-ip system-id mode))
     (else
      (throw 'artanis-err 400 chiba:node-config
             "Unknown config type: ~a" config-expr))))
