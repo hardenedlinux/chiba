@@ -16,6 +16,15 @@
 ;;  If not, see <http://www.gnu.org/licenses/>.
 
 (define-module (chiba utils)
-  #:export (bmc-test-addr))
+  #:export (bmc-test-addr
+            run/status))
 
 (define bmc-test-addr (make-parameter "localhost:2443"))
+
+(define-syntax-rule (run/status status-code body ...)
+  (catch #t
+    (lambda () body ...)
+    (lambda e
+      (cond
+       ((eq? 'artanis-err (car e)) (apply throw e))
+       (else (throw 'artanis-err status-code 'Unknown "~a" e))))))
