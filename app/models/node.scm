@@ -1,10 +1,12 @@
 (import (artanis mvc model)
-        (chiba bmc))
+        (chiba bmc)
+        (chiba utils))
 
 (export get-node-by-ip
         apply-token-for-node!
         init-new-node
-        try-to-get-token-from-ip)
+        try-to-get-token-from-ip
+        get-all-node-ip)
 
 ;; Model node definition of chiba
 ;; Please add your license header here.
@@ -19,11 +21,12 @@
  (hostname char-field (#:maxlen 255))
  (model char-field (#:maxlen 64))
  (firmware_version char-field (#:maxlen 50))
- (last_updated datetime)
+ (last_updated bigint (#:unsigned #:not-null))
  (status char-field (#:maxlen 10))
  (location char-field (#:maxlen 255))
  (contact_person char-field (#:maxlen 100))
  (maintenance_mode boolean)
+ (valid boolean)
  ) ; DO NOT REMOVE THIS LINE!!!
 
 (define* (get-node-by-ip ip #:key (check? #f))
@@ -63,3 +66,9 @@
     (if (not node)
         (assoc-ref node "token")
         (apply-token-for-node-ip! node))))
+
+(define (get-all-node-ip)
+  (run/status
+   500
+   (and=> ($node 'get #:columns '(ip))
+          (map (lambda (x) (assoc-ref x "ip"))))))
