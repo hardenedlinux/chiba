@@ -59,7 +59,7 @@ Chiba project has been developing by [HardenedLinux](https://hardenedlinux.org),
 
 - **Cloud service providers**: Chiba can be used to build the next generation of cloud computing infrastructure.
 - **Enterprises**: Chiba can be used to build the private cloud infrastructure.
-- **Hardware vendors**: Chiba can be used to provide the firmware enhancement for the hardware products.
+- **Hardware vendors**: OpenBMC standard contains hardware vendor specific parts, which need to be customized in Chiba.
 - **Security vendors**: Chiba can be used to provide the firmware security enhancement for the hardware products.
 
 For now, we don't have real hardware (rack with OpenBMC) to test. If you are any of the above roles and interested in Chiba, please contact us: NalaGinrut@hardenedlinux.org.
