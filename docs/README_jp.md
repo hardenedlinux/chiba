@@ -39,6 +39,13 @@ Chibaプロジェクトは、楽しみと利益のために作られました。
 - **GPU指向のコンピューティングノード**: ODMとしての役割を果たしながら、単一ノードのパフォーマンスを最大化し、コストパフォーマンスを最適化します。例：[Tinycorp - Tinybox](https://tinygrad.org/#tinybox)。
 - **ビルディングブロックアプローチ**: OEMサプライチェーンの重要なコンポーネントをビルディングブロックに抽象化し、業界ユーザーのニーズに応じて自由に組み合わせます。例：[HardenedVault](https://hardenedvault.net/)。
 
+### ブログ記事
+
+英語
+
+- [People who are really serious about AI should have their own datacenter](https://hardenedlinux.medium.com/people-who-are-really-serious-about-ai-should-have-their-own-datacenter-888cc10a0e4a)
+- [Cloud Computing’s Hidden Hero: The Untold Story of OpenBMC](https://hardenedlinux.medium.com/cloud-computings-hidden-hero-the-untold-story-of-openbmc-1d15fd29f514)
+
 ### OpenBMCを制御するプロジェクトがすでにあるのに、なぜ新しいものを作るのか？
 
 確かに、OpenBMCやRedfish APIを制御するプロジェクトはすでにあります。

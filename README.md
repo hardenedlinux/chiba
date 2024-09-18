@@ -41,6 +41,11 @@ Nowadays, we're actually facing an extreamly complex supply chain. There are sev
 - **GPU-oriented computing node**: To maximize the performance of a single node while playing the role of an ODM, ensuring the best cost-performance ratio. E.g, [Tinycorp - Tinybox](https://tinygrad.org/#tinybox).
 - **Building block approach**: Abstract the critical components in the OEM supply chain into building blocks that can be freely combined based on the needs of industry users. E.g, [HardenedVault](https://hardenedvault.net/).
 
+### Blog posts
+
+- [People who are really serious about AI should have their own datacenter](https://hardenedlinux.medium.com/people-who-are-really-serious-about-ai-should-have-their-own-datacenter-888cc10a0e4a)
+- [Cloud Computing’s Hidden Hero: The Untold Story of OpenBMC](https://hardenedlinux.medium.com/cloud-computings-hidden-hero-the-untold-story-of-openbmc-1d15fd29f514)
+
 ### There're projects for controling OpenBMC, why bother to create another one?
 
 Yes, there're projects for OpenBMC and Redfish API.
