@@ -1,5 +1,5 @@
 ;;  -*-  indent-tabs-mode:nil; coding: utf-8 -*-
-;;  Copyright (C) 2024
+;;  Copyright (C) 2024-2025
 ;;      HardenedLinux developers
 ;;  This is free software: you can redistribute it and/or modify
 ;;  it under the terms of the GNU General Public License published by
@@ -43,7 +43,7 @@
       (lambda ()
         (artanis:http-post
          (format #f "https://~a/login" addr)
-         #:headers '((content-type . application/json))
+         #:headers '((content-type application/json))
          #:body (scm->json-string
                  `((username . ,username) (password . ,password)))))
     (lambda (_ body)
@@ -58,7 +58,7 @@
         (lambda ()
           (artanis:http-get
            url
-           #:headers `((x-auth-token . ,token)) #:bytevector? #t))
+           #:headers `((x-auth-token ,token)) #:bytevector? #t))
       (lambda (res body)
         (cond
          ((= (response-code res) 200) (http-body-cooker res body))
@@ -76,8 +76,8 @@
         (lambda ()
           (artanis:http-post
            (pk 'post-url url)
-           #:headers `((x-auth-token . ,token)
-                       (content-type . application/json))
+           #:headers `((x-auth-token ,token)
+                       (content-type application/json))
            #:body (pk 'post-body  body)))
       (lambda (res body)
         (cond
@@ -96,8 +96,8 @@
         (lambda ()
           (artanis:http-patch
            url
-           #:headers `((x-auth-token . ,token)
-                       (content-type . application/json))
+           #:headers `((x-auth-token ,token)
+                       (content-type application/json))
            #:body body))
       (lambda (res body)
         (cond
